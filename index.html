@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles_Less/index.css" />
+    <link rel="stylesheet" href="Styles_Less/styles.less" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="video-player">
+      <video
+        class="video"
+        src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+        poster="img/forestPhoto.jpg"
+      ></video>
+      player controls for video
+      <div class="players-controls">
+        <button class="play-button" title="Play">▶️</button>
+      </div>
+      <input
+        type="range"
+        class="volume"
+        min="0.0"
+        max="1.0"
+        step="0.01"
+        value="100"
+      />
+      <div class="time">
+        <span class="current">0:00</span> / <span class="duration">0:00</span>
+      </div>
+    </div>
+    <!-- javascript file -->
+    <script src="video.js"></script>
+  </body>
+</html>
+
+<!-- “https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4” -->

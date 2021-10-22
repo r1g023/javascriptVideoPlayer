@@ -1,0 +1,23 @@
+{
+  "name": "javascriptvideoplayer",
+  "version": "1.0.0",
+  "description": "Video Player Project  - HTML5, CSS3 and JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rigo0523/javascriptVideoPlayer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rigo0523/javascriptVideoPlayer/issues"
+  },
+  "homepage": "https://github.com/rigo0523/javascriptVideoPlayer#readme",
+  "devDependencies": {
+    "eslint": "^8.0.1"
+  }
+}
