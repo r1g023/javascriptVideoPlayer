@@ -17,7 +17,8 @@ body {
   justify-content: center;
 }
 #video-player {
-  width: 750px;
+  width: 420px;
+  height: 340px;
 }
 #video-player .video {
   width: 100%;
@@ -25,4 +26,8 @@ body {
 }
 .players-controls {
   border: 1px solid red;
+}
+.time {
+  font-size: 1em;
+  color: white;
 }
