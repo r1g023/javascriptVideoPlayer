@@ -52,4 +52,12 @@ body {
 .player-controls .time {
   font-size: 1em;
   color: white;
+  width: 20%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player-controls .time span {
+  margin: 3px;
 }
