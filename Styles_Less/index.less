@@ -17,17 +17,23 @@ body {
   justify-content: center;
 }
 
+//container for video
 #video-player {
   width: 420px;
   height: 340px;
   position: relative;
   overflow: hidden;
+  &:hover .player-controls {
+    transform: translateY(0);
+  }
   .video {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }
 
+//Player conrols container for all buttons and options
 .player-controls {
   display: flex;
   position: absolute;

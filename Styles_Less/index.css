@@ -22,9 +22,13 @@ body {
   position: relative;
   overflow: hidden;
 }
+#video-player:hover .player-controls {
+  transform: translateY(0);
+}
 #video-player .video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .player-controls {
   display: flex;
