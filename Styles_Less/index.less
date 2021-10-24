@@ -20,17 +20,26 @@ body {
 #video-player {
   width: 420px;
   height: 340px;
+  position: relative;
+  overflow: hidden;
   .video {
     width: 100%;
-    border: 3px solid green;
+    height: 100%;
   }
 }
 
-.players-controls {
-  border: 1px solid red;
-}
-
-.time {
-  font-size: 1em;
-  color: white;
+.player-controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%) translateY(-5px);
+  transition: 0.3s;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  .time {
+    font-size: 1em;
+    color: white;
+  }
 }
