@@ -8,7 +8,7 @@ const currentTimeElement = videoPlayer.querySelector(".current");
 const durationTimeElement = videoPlayer.querySelector(".duration");
 //progress bar options
 const progress = videoPlayer.querySelector(".video-progress");
-const progressBar = videoPlayer.querySelector("video-progress-filled");
+const progressBar = videoPlayer.querySelector(".video-progress-filled");
 
 //load page / video
 window.addEventListener("load", (e) => {
@@ -34,8 +34,10 @@ setVolume.addEventListener("mousemove", (e) => {
 
 //curent time and duration
 const currentTime = () => {
+  //current timer on length of video
   let currentMinutes = Math.floor(video.currentTime / 60);
   let currentSeconds = Math.floor(video.currentTime - currentMinutes * 60);
+  //total length of video
   let durationMinutes = Math.floor(video.duration / 60);
   let durationSeconds = Math.floor(video.duration - durationMinutes * 60);
 
@@ -47,4 +49,11 @@ const currentTime = () => {
   }`;
 };
 
+//update time as video is plaing or paused
 video.addEventListener("timeupdate", currentTime);
+
+//proress bar for video
+video.addEventListener("timeupdate", () => {
+  const percentage = (video.currentTime / video.duration) * 100;
+  progressBar.style.width = `${percentage}%`;
+});
