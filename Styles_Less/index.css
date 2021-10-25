@@ -48,7 +48,7 @@ body #video-player .player-controls .video-progress {
   position: relative;
   display: flex;
   width: 100%;
-  height: 5px;
+  height: 10px;
   transition: 0.3s;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.6);

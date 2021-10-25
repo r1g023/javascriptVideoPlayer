@@ -54,6 +54,13 @@ video.addEventListener("timeupdate", currentTime);
 
 //proress bar for video
 video.addEventListener("timeupdate", () => {
+  // create percentage as timer runs
   const percentage = (video.currentTime / video.duration) * 100;
   progressBar.style.width = `${percentage}%`;
+});
+
+//change progress bar on click
+progress.addEventListener("click", (e) => {
+  const progressTime = (e.offsetX / progress.offsetWidth) * video.duration;
+  video.currentTime = progressTime;
 });
