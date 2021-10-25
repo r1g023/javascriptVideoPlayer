@@ -54,8 +54,8 @@ body #video-player .player-controls .video-progress {
   background: rgba(0, 0, 0, 0.6);
 }
 body #video-player .player-controls .video-progress .video-progress-filled {
-  width: 50%;
   background: orangered;
+  width: 0;
 }
 body #video-player .player-controls input[type="range"] {
   width: 30%;
