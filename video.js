@@ -2,9 +2,13 @@ const videoPlayer = document.getElementById("video-player"); //container
 const video = videoPlayer.querySelector(".video"); //video element
 const videoSource = videoPlayer.querySelector(".videoSource");
 const playButton = videoPlayer.querySelector(".play-button");
-const volume = videoPlayer.querySelector(".volume");
+const setVolume = videoPlayer.querySelector(".volume");
+//video duration
 const currentTimeElement = videoPlayer.querySelector(".current");
 const durationTimeElement = videoPlayer.querySelector(".duration");
+//progress bar options
+const progress = videoPlayer.querySelector(".video-progress");
+const progressBar = videoPlayer.querySelector("video-progress-filled");
 
 //load page / video
 window.addEventListener("load", (e) => {
@@ -23,8 +27,8 @@ playButton.addEventListener("click", (e) => {
   }
 });
 
-//volume
-volume.addEventListener("mousemove", (e) => {
+//volume slider setVolume
+setVolume.addEventListener("mousemove", (e) => {
   video.volume = e.target.value;
 });
 

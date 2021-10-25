@@ -12,11 +12,14 @@
   <body>
     <div id="video-player">
       <!-- main video  -->
-      <video class="video" type="video/webm" type="video/mp4" type="video/ogg">
-        VIDEO
-      </video>
+      <video class="video" poster="img/forestPhoto.jpg">VIDEO</video>
       <!-- player controls for video -->
       <div class="player-controls">
+        <!-- video progress bar -->
+        <div class="video-progress">
+          <div class="video-progress-filled"></div>
+        </div>
+        <!-- play and pause buttons -->
         <button class="play-button" title="Play">▶️</button>
         <!-- video volume -->
         <input
@@ -24,7 +27,7 @@
           class="volume"
           min="0"
           max="1"
-          step="0.1"
+          step="0.01"
           value="1"
         />
         <!-- video time -->
