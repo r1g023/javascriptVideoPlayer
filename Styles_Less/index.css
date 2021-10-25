@@ -57,33 +57,51 @@ body #video-player .player-controls .video-progress .video-progress-filled {
   background: orangered;
   width: 0;
 }
-body #video-player .player-controls input[type="range"] {
+body #video-player .player-controls .inner-player-controls {
+  width: 100%;
+  display: flex;
+  border: 1px solid red;
+}
+body #video-player .player-controls .inner-player-controls input[type="range"] {
   width: 30%;
   cursor: pointer;
 }
-body #video-player .player-controls input[type="range"]:focus {
+body
+  #video-player
+  .player-controls
+  .inner-player-controls
+  input[type="range"]:focus {
   outline: none;
 }
-body #video-player .player-controls input[type="range"]::-webkit-slider-runnable-track {
+body
+  #video-player
+  .player-controls
+  .inner-player-controls
+  input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 15px;
   cursor: pointer;
 }
-body #video-player .player-controls input[type="range"]::-webkit-slider-thumb {
+body
+  #video-player
+  .player-controls
+  .inner-player-controls
+  input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 10px;
   width: 10px;
   cursor: pointer;
 }
-body #video-player .player-controls .play-button {
+body #video-player .player-controls .inner-player-controls .play-button {
   width: 10%;
   font-size: 1.3em;
   background: black;
   border: none;
   color: white;
   padding: 7px;
+  cursor: pointer;
 }
-body #video-player .player-controls .time {
+body #video-player .player-controls .inner-player-controls .time {
   font-size: 1em;
   color: white;
   width: 20%;
@@ -92,6 +110,6 @@ body #video-player .player-controls .time {
   justify-content: center;
   align-items: center;
 }
-body #video-player .player-controls .time span {
+body #video-player .player-controls .inner-player-controls .time span {
   margin: 3px;
 }
