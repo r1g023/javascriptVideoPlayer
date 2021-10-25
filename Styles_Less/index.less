@@ -64,7 +64,7 @@ body {
       .inner-player-controls {
         width: 100%;
         display: flex;
-        border: 1px solid red;
+
         //voclume bar styling
         input[type="range"] {
           width: 30%;
@@ -83,6 +83,42 @@ body {
           height: 10px;
           width: 10px;
           cursor: pointer;
+        }
+        //global styling for volume button
+        .control-button {
+          background: transparent;
+          color: white;
+          border: none;
+          outline: none;
+          width: 10%;
+          font-size: 1.3em;
+          cursor: pointer;
+        }
+
+        //mute button
+        .mute {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        //toggle mute button on/off
+        .mute.muted {
+          opacity: 0.5;
+        }
+
+        //add slash to mute button when muted
+        .mute .slash {
+          position: absolute;
+          width: 2px;
+          height: 56%;
+          background: red;
+          transform: rotate(-50deg);
+          display: none;
+        }
+
+        .mute.muted .slash {
+          display: block;
         }
 
         //play button, total / current time options
@@ -106,6 +142,9 @@ body {
           span {
             margin: 3px;
           }
+        }
+        .fullscreen {
+          margin-left: 70px;
         }
       }
     }
