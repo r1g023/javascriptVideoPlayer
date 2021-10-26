@@ -24,7 +24,15 @@
   <body>
     <div id="video-player">
       <!-- main video  -->
-      <video class="video" poster="img/forestPhoto.jpg">VIDEO</video>
+      <video
+        class="video"
+        poster="img/forestPhoto.jpg"
+        width="600"
+        height="340"
+        autoplay
+      >
+        VIDEO
+      </video>
       <!-- player controls for video -->
       <div class="player-controls">
         <!-- video progress bar -->
@@ -35,12 +43,12 @@
         <div class="inner-player-controls">
           <!-- play and pause buttons -->
           <button class="play-button" title="Play" aria-label="play-pause">
-            ▶️
+            ▶
           </button>
           <!-- mute button and toggle on / off -->
           <button class="mute control-button" aria-label="mute">
             <div class="slash"></div>
-            🔊
+            <i class="fas fa-volume-up"></i>
           </button>
           <!-- video volume -->
           <input
@@ -64,6 +72,10 @@
         </div>
       </div>
     </div>
+    <!-- Show video height/width and show playback status -->
+    <p>Video height: <span class="height"></span></p>
+    <p>Video width: <span class="width"></span></p>
+    <p>Playback State: <span class="output"></span></p>
     <!-- javascript file -->
     <script src="video.js"></script>
   </body>

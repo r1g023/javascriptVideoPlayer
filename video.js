@@ -14,6 +14,11 @@ const progressBar = videoPlayer.querySelector(".video-progress-filled");
 const mute = videoPlayer.querySelector(".mute");
 //full screen
 const fullscreen = videoPlayer.querySelector(".fullscreen");
+//get height
+const heightOutput = document.querySelector(".height");
+const widthOutput = document.querySelector(".width");
+//get if media is playing or paused
+const output = document.querySelector(".output");
 
 //load page / video
 window.addEventListener("load", (e) => {
@@ -25,10 +30,10 @@ window.addEventListener("load", (e) => {
 playButton.addEventListener("click", (e) => {
   if (video.paused) {
     video.play();
-    e.target.textContent = "⏸️";
+    e.target.innerHTML = "&#9616;&#9616";
   } else {
     video.pause();
-    e.target.textContent = "▶️";
+    e.target.innerHTML = "▶";
   }
 });
 
@@ -81,12 +86,44 @@ fullscreen.addEventListener("click", () => {
   video.requestFullscreen();
 });
 
+//video resize function
+function videoSize() {
+  heightOutput.innerHTML = video.height;
+  widthOutput.innerHTML = video.width;
+}
 //resize video
-video.addEventListener("resize", (e) => {
-  let w = video.videoWidth;
-  let h = video.videoHeight;
-  if (w && h) {
-    video.style.width = w;
-    video.style.height = h;
+window.addEventListener("resize", videoSize);
+
+//auto play function set to false
+window.addEventListener("load", () => {
+  let confirmAction = confirm("Are you sure want to autoplay this video?");
+  if (confirmAction) {
+    alert("Action successfully executed");
+    video.autoplay = true;
+    video.play();
+  } else {
+    alert("Action canceled");
+    video.autoplay = false;
+    video.pause();
   }
+});
+
+video.addEventListener("playing", () => {
+  output.innerHTML = "Playing";
+});
+
+video.addEventListener("pause", () => {
+  output.innerHTML = "Paused";
+});
+
+video.addEventListener("seeking", () => {
+  output.innerHTML = "Seeking event triggered";
+});
+
+video.addEventListener("volumechange", () => {
+  output.innerHTML = "Volume change event triggered";
+});
+
+video.addEventListener("ended", () => {
+  output.innerHTML = "Video ended";
 });
