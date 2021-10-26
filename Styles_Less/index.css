@@ -60,37 +60,53 @@ body #video-player .player-controls .video-progress .video-progress-filled {
 body #video-player .player-controls .inner-player-controls {
   width: 100%;
   display: flex;
-  border: 1px solid red;
 }
 body #video-player .player-controls .inner-player-controls input[type="range"] {
   width: 30%;
   cursor: pointer;
 }
-body
-  #video-player
-  .player-controls
-  .inner-player-controls
-  input[type="range"]:focus {
+body #video-player .player-controls .inner-player-controls input[type="range"]:focus {
   outline: none;
 }
-body
-  #video-player
-  .player-controls
-  .inner-player-controls
-  input[type="range"]::-webkit-slider-runnable-track {
+body #video-player .player-controls .inner-player-controls input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 15px;
   cursor: pointer;
 }
-body
-  #video-player
-  .player-controls
-  .inner-player-controls
-  input[type="range"]::-webkit-slider-thumb {
+body #video-player .player-controls .inner-player-controls input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 10px;
   width: 10px;
   cursor: pointer;
+}
+body #video-player .player-controls .inner-player-controls .control-button {
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  width: 10%;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+body #video-player .player-controls .inner-player-controls .mute {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #video-player .player-controls .inner-player-controls .mute.muted {
+  opacity: 0.5;
+}
+body #video-player .player-controls .inner-player-controls .mute .slash {
+  position: absolute;
+  width: 2px;
+  height: 56%;
+  background: red;
+  transform: rotate(-50deg);
+  display: none;
+}
+body #video-player .player-controls .inner-player-controls .mute.muted .slash {
+  display: block;
 }
 body #video-player .player-controls .inner-player-controls .play-button {
   width: 10%;
@@ -112,4 +128,7 @@ body #video-player .player-controls .inner-player-controls .time {
 }
 body #video-player .player-controls .inner-player-controls .time span {
   margin: 3px;
+}
+body #video-player .player-controls .inner-player-controls .fullscreen {
+  margin-left: 70px;
 }
